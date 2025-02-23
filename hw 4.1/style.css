@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90.625%;
+    min-width: 290px;
+    margin: 25px auto;
+}
+
+header .container {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.task {
+    transform: translateX(calc(-50vw + 50%));
+}
