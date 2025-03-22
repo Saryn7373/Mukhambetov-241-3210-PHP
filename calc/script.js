@@ -68,14 +68,17 @@ class Calculator {
                 this.updateInput()
                 break
             case ')':
-                if (this.term.split(')').length < this.term.split('(').length && !(this.term.endsWith('('))) {
-                    this.term += ev.target.getAttribute('value')
-                    this.updateInput()
+                if ((this.term.split(')').length < this.term.split('(').length) && 
+                    (!forbiddenEndings.some((end) => this.term.endsWith(end)))) {
+                        this.term += ev.target.getAttribute('value')
+                        console.log(this.term)
+                        this.updateInput()
                 }
                 break
 
             default:
-                if (!forbiddenEndings.some((end) => this.term.endsWith(end))) {
+                if ((!forbiddenEndings.some((end) => this.term.endsWith(end))) || 
+                    (this.term.endsWith('(') && ev.target.getAttribute('value') === '-')) {
                         this.term += ev.target.getAttribute('value')
                         this.updateInput()
                 }
