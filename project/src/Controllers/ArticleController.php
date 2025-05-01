@@ -54,7 +54,7 @@ class ArticleController {
             throw new NotFoundException();
         }
         $article->delete(); // тут удаляем статью через delete() - метод из ActiveRecordEntity
-        header("Location: http://localhost/PHP/Project/www/");
+        header("Location: http://localhost/Mukhambetov-241-3210/project/www/");
     }
     
 
@@ -78,7 +78,7 @@ class ArticleController {
     $article->setName($_POST['name']);
     $article->setText($_POST['text']);
     $article->save(); // запрос на сохранение идет от объекта модели - active record
-    header("Location: http://localhost/PHP/Project/www/");
+    header("Location: http://localhost/Mukhambetov-241-3210/project/www/");
 }
 
     public function store() // функция для сохранения новых статей
