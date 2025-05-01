@@ -29,7 +29,7 @@ class Db
     public function getLastInsertId(): int // функция получения id последней записи 
     {
         return (int)$this->pdo->lastInsertId(); // возвращаем id при полсденем insert
-     }
+    }
 
     public static function getInstance(): self // тут реализуем синглтон
     {

@@ -88,6 +88,6 @@ class ArticleController {
         $article->setText($_POST['text'] ?? '');
         $article->setAuthorId(1); 
         $article->save(); // INSERT to Db
-        header("Location: http://localhost/PHP/Project/www/"); 
+        header("Location: http://localhost/Mukhambetov-241-3210/project/www/"); 
     }
 }

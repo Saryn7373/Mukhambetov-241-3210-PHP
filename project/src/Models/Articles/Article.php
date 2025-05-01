@@ -34,7 +34,6 @@ class Article extends ActiveRecordEntity
         return User::getById($this->author_id); //тут загружаем объект User через User::getById()
     }
     
-   
     public function setName(string $name): void 
     {
         $this->name = $name;
